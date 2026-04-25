@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     /* 預設為深夜主題 - Night Theme */
     --bg-color: #0b0f19;
@@ -318,8 +324,9 @@ body.theme-morning .logo h1 {
     }
 
     .search-container {
-        padding: 0 1rem;
-        max-width: 100%; /* 確保滿版 */
+        padding: 0;
+        margin: 0 auto 2rem auto;
+        width: 100%;
     }
 
     .search-bar {
