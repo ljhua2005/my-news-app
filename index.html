@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>華華 新聞網</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-gradients">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">✧</span>
+                <h1>華華 新聞網</h1>
+            </div>
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" class="search-input"
+                        placeholder="輸入你想關注的主題，例如: AI, 台灣經濟, 國際政治..." required autocomplete="off">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+                <div class="trending-topics">
+                    <span>熱門推薦:</span>
+                    <button class="topic-tag" data-topic="00919">00919</button>
+                    <button class="topic-tag" data-topic="00929">00929</button>
+                    <button class="topic-tag" data-topic="Dell股價">Dell股價</button>
+                    <button class="topic-tag" data-topic="00940">00940</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside class="market-panel">
+                <div class="panel-header">
+                    <h3>市場追蹤</h3>
+                    <div id="stock-loading" class="spinner-small hidden"></div>
+                </div>
+                <div id="stock-list" class="stock-list">
+                    <!-- Stock items will go here -->
+                </div>
+            </aside>
+
+            <section class="content-section">
+                <div class="status-bar">
+                    <h2 id="current-topic-title">為您精選的最新消息</h2>
+                    <div id="loading-spinner" class="spinner hidden"></div>
+                </div>
+
+                <div id="error-message" class="error-message hidden"></div>
+
+                <div class="news-grid" id="news-container">
+                    <!-- Data will be populated here -->
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <p>輸入一個主題，讓我為您尋找最相關的十大新聞報導。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
