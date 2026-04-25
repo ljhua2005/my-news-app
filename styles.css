@@ -318,30 +318,42 @@ body.theme-morning .logo h1 {
     }
 
     .search-container {
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+        max-width: 100%; /* 確保滿版 */
     }
 
     .search-bar {
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 3.5rem 0.6rem 1.2rem; /* 右側留出更多空間給放大鏡 */
+        font-size: 0.95rem;
+    }
+
+    .search-button {
+        right: 12px; /* 稍微往左移一點，防止切到 */
+        width: 36px;
+        height: 36px;
     }
 
     .trending-topics {
         font-size: 0.8rem;
         flex-wrap: wrap; /* 標籤太多時自動換行 */
         justify-content: center;
+        gap: 0.5rem;
     }
 
     .main-layout {
-        grid-template-columns: 1fr; /* 強制單欄排列 */
+        display: flex;
+        flex-direction: column; /* 強制垂直排列，絕不重疊 */
         gap: 1.5rem;
     }
 
     /* 手機版市場區塊優化 */
     .market-panel {
         position: relative; 
+        top: auto; /* 徹底取消固定效果 */
         z-index: 10;
-        padding: 0.8rem 1rem;
-        margin-bottom: 1rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
     }
 
     .news-grid {
