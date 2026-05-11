@@ -329,15 +329,13 @@ body.theme-morning .logo h1 {
         width: 100%;
     }
 
-    .search-bar {
-        padding: 0.6rem 3.5rem 0.6rem 1.2rem; /* 右側留出更多空間給放大鏡 */
+    .search-input {
+        padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
     }
 
     .search-button {
-        right: 12px; /* 稍微往左移一點，防止切到 */
-        width: 36px;
-        height: 36px;
+        padding: 0 1rem;
     }
 
     .trending-topics {
