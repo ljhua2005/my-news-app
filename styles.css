@@ -352,19 +352,16 @@ body.theme-morning .logo h1 {
         gap: 1.5rem;
     }
 
-    /* 手機版市場區塊優化 */
+    /* 手機版市場區塊優化：取消固定與疊加層級，讓內容自然滾動 */
     .market-panel {
-        position: relative; 
-        top: auto; /* 徹底取消固定效果 */
-        z-index: 10;
+        position: static;
         padding: 1rem;
         margin-bottom: 0.5rem;
         width: 100%;
     }
 
     .news-grid {
-        position: relative;
-        z-index: 1; /* 讓新聞的層級低於市場追蹤 */
+        position: static;
     }
 
     .stock-list {
